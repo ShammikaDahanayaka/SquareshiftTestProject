@@ -7,18 +7,17 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         //features = "@rerun/failed_scenarios.txt",
-		 features = "src/test/resources/zoho",
+		 features = "src/test/resources/featureFiles",
          glue = {"zoho.teststeps"},
-        //tags = "@Scenario3",
+        //tags = "@Scenario1",
          plugin = { "html:target/cucumber-reports.html","rerun:rerun/failed_scenarios.txt"},
-       //  tags = "@DeleteLead",
          monochrome = false,
          dryRun = false
 )
 public class MyRunner extends AbstractTestNGCucumberTests {
 	
 	@Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }

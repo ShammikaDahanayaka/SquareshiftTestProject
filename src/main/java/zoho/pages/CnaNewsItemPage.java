@@ -16,7 +16,7 @@ public class CnaNewsItemPage {
 
     public void ValidateStoryOfHeadline(String headline) {
         WebElement headStory = app.findElement("headlineStory_xp");
-        Assert.assertEquals(headStory.getText().trim(), headline, "Headline news is not matched");
+        Assert.assertEquals(headStory.getText().trim().replaceAll("[-+.^:,']",""), headline, "Headline news is not matched");
     }
 
     public void scrolldown() throws InterruptedException {

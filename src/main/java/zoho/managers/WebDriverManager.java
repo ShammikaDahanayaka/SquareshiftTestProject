@@ -8,14 +8,12 @@ import java.util.Properties;
 import java.util.SplittableRandom;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -231,9 +229,12 @@ public class WebDriverManager {
 		//WebElement element = driver.findElement(By.xpath("//*[contains(text(),'Expand to read the full story')]"));
 		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		/*JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		Thread.sleep(500);
+		Thread.sleep(500);*/
+
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 	}
 	
 	

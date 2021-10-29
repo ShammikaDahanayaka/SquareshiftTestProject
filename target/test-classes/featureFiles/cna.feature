@@ -16,12 +16,12 @@ Feature: CNA page verification
       Given Given I am landing in cna.com
       When I should see the headline news item Title
       And I click on Headline news
-      Then I should see the actual story as '<Headline>' for the headline
+     Then I should see the actual story as '<Headline>' for the headline
       And I scroll the browser
       And I click '<newsNo>' news item
       Examples:
       |Headline|newsNo|
-      |Severe cases more important indicator of COVID-19 situation than infection growth rate, experts say|2|
+      |I was going to die: Unvaccinated COVID-19 patient urges others to get jabbed after near-death experience|2|
 
   @Scenario2
   Scenario Outline: Verify news feeds of Singapore

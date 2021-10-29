@@ -56,7 +56,7 @@ public class CnaHome {
 
     @Then("I should see the actual story as {string} for the headline")
     public void iShouldSeeTheActualStoryAsHeadlineForTheHeadline(String Headline) throws Throwable {
-        cnaNewsItemPage.ValidateStoryOfHeadline(Headline.trim());
+        cnaNewsItemPage.ValidateStoryOfHeadline(Headline.trim().replaceAll("[-+.^:,']",""));
     }
 
     @And("I scroll the browser")
