@@ -12,15 +12,15 @@ Steps-- >
 
 Key Features of framework :
 
-Maven project with dependencies for Cucumber, Selenium, Junit,Log4j
-Running simple feature/Step scenario
-Building custom functions in WebConnector
-Logging using Log4J
-Executing project from Maven
-Generating Junit, Cucumber reports
-Generating Extent Reports in Cucumber
-Background and Pending Exception
-Parameterizing/repeating test cases from feature classes
-Implementing/deciding Tags
-Running all/limited testsRunning all/limited tests
-Parallel testing
+1. Maven project with dependencies for Cucumber, Selenium, Junit,Log4j
+2. Running simple feature/Step scenario
+3. Building custom functions in WebConnector
+4. Logging using Log4J
+5. Executing project from Maven
+6. Generating Junit, Cucumber reports
+7. Generating Extent Reports in Cucumber
+8. Background and Pending Exception
+9. Parameterizing/repeating test cases from feature classes
+10. Implementing/deciding Tags
+11. Running all/limited testsRunning all/limited tests
+12. Parallel testing
